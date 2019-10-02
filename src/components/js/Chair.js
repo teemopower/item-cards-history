@@ -14,6 +14,20 @@ export class Chair extends React.Component {
         >
           Back
         </button>
+        <div className="details-container">
+          {this.props.location.state ? (
+            <div>
+              <img
+                src={this.props.location.state.src}
+                style={{ height: "300px" }}
+                alt=""
+              />
+              <div>{this.props.location.state.name}</div>
+              <br />
+              <div>{this.props.location.state.description}</div>
+            </div>
+          ) : null}
+        </div>
       </div>
     );
   }
