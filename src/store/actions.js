@@ -1,6 +1,6 @@
 export function getAllFurniture() {
   return dispatch => {
-    return fetch("https://api.myjson.com/bins/t8c1x")
+    return fetch("https://api.myjson.com/bins/jbg89")
       .then(res => res.json())
       .then(function(data) {
         console.log("action data", data);

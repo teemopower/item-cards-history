@@ -1,15 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "../styles/Header.css";
 import { Main } from "./Main";
 import { Chair } from "./Chair";
 
 export class Header extends React.Component {
-  constructor() {
-    super();
-  }
-
   render() {
     return (
       <Router>

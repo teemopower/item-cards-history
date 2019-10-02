@@ -1,10 +1,10 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  withRouter
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   Link,
+//   withRouter
+// } from "react-router-dom";
 
 import "../styles/Cards.css";
 
@@ -55,9 +55,8 @@ export class Cards extends React.Component {
     ];
   }
 
-  handleClick() {
-    console.log(this.props);
-    // this.props.data.history.push("/Chair");
+  handleClick(val) {
+    console.log("item details val", val);
 
     this.props.data.history.push({
       pathname: "/Chair",
@@ -73,7 +72,7 @@ export class Cards extends React.Component {
         {data.cards.payload.map((val, index) => {
           return (
             <div className="cards-container" key={index}>
-              <div className="cards-body" onClick={this.handleClick}>
+              <div className="cards-body" onClick={() => this.handleClick(val)}>
                 <div className="cards-header">{val.name}</div>
                 <div className="cards-img">
                   <img src={val.src} alt="" />
